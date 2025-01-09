@@ -137,6 +137,8 @@ body {
 
     font-family: var(--font-family-regular);
     font-size: var(--display-heading-s);
+
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
@@ -361,7 +363,8 @@ nav {
 }
 
 .about-button:hover {
-    background-color: var(--colors-white);
+    /* background-color: var(--colors-white); */
+    color: var(--colors-white);
 }
 
 .about-slider {
@@ -525,3 +528,29 @@ input[type="radio"] {
     background-size: 40px;
     padding: var(--spacing-8) var(--spacing-6);
 }
+
+.signup {
+    background-color: var(--colors-dim-orange);
+    padding: var(--spacing-8) var(--spacing-8);
+    position: relative;
+    z-index: 2;
+}
+
+.form-field {
+    margin-top: var(--spacing-4);
+}
+
+.form-field label {
+    display: block;
+}
+
+.multiple-line-input {
+    width: 100%;
+    height: auto;
+}
+
+.signup-submit {
+    margin-top: var(--spacing-4);
+    border-radius: var(--border-sm) var(--border-sm) var(--border-sm) var(--border-0);
+}
+

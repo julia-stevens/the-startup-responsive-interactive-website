@@ -322,28 +322,36 @@
             </figure>
         </section>
 
-        <section>
+        <section class="signup">
             <h2>Schrijf je in!</h2>
 
             <p>Enthousiast over ons, maar is dit niet de vacature waar je naar op zoek bent? Schrijf je in dan in!</p>
 
             <form>
-                <label for="name">Naam</label>
-                <input type="text" id="name" class="text-input single-line-input" required>
+                <div class="form-field">
+                    <label for="name">Naam</label>
+                    <input type="text" id="name" class="text-input single-line-input" required>
+                </div>
 
-                <label for="email">E-mail</label>
-                <input type="email" id="email" class="text-input single-line-input" required>
+                <div class="form-field">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" class="text-input single-line-input" required>
+                </div>
 
-                <label for="motivation">Motivatie</label>
-                <input type="text" id="motivation" class="text-input multiple-line-input">
+                <div class="form-field">
+                    <label for="motivation">Motivatie</label>
+                    <input type="text" id="motivation" class="text-input multiple-line-input">
+                </div>
 
-                <label for="uploadfile"></label>
-                <input type="file" id="uploadfile" required>
+                <div class="form-field">
+                    <label for="uploadfile"></label>
+                    <input type="file" id="uploadfile" required>
+                </div>
 
-                <button type="submit" class="button primary-button">Verzend</button>
+                <button type="submit" class="button primary-button signup-submit">Verzend</button>
             </form>
 
-            <img src="./assests/background-ink.svg" alt="" width="100"> <!-- svg met achtergrond afbeelding -->
+            <!-- <img src="./assests/background-ink.svg" alt="" width="100" class="large-bg-ink-signup"> svg met achtergrond afbeelding -->
         </section>
 
         <footer>
