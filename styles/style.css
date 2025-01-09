@@ -343,7 +343,7 @@ nav {
 .about-text {
     margin-top: var(--spacing-8);
     background-color: var(--colors-dim-orange);
-    padding: var(--spacing-8) var(--spacing-4);
+    padding: var(--spacing-8) var(--spacing-8);
     border-radius: var(--border-md) var(--border-md) var(--border-md) var(--border-0);
     width: 85vw;
 }
@@ -484,4 +484,44 @@ input[type="radio"] {
     opacity: .5;
     top: 70%;
     right: -100%;
+}
+
+.quote {
+    margin: var(--spacing-8) auto;
+    background-color: var(--colors-primary-500);
+    padding: var(--spacing-8) var(--spacing-8);
+    border-radius: var(--border-md) var(--border-md) var(--border-md) var(--border-0);
+    width: 85vw;
+    color: var(--colors-white);
+
+    h2 {
+        display: none;
+    }
+}
+
+.quote figure {
+    margin-top: var(--spacing-4);
+
+    /* Flex parent */
+    display: flex; 
+    justify-content: space-between;
+    align-items: start;
+}
+
+.quote figure img {
+    width: 150px;
+    border-radius: var(--border-full) var(--border-full) var(--border-0) var(--border-full);
+}
+
+.quote figure strong {
+    display: block;
+    font-family: var(--font-family-semibold);
+}
+
+.quote p::before {
+    content: "";
+    background-image: url("../assests/quotemarks.png");
+    background-repeat: no-repeat;
+    background-size: 40px;
+    padding: var(--spacing-8) var(--spacing-6);
 }
