@@ -554,3 +554,34 @@ input[type="radio"] {
     border-radius: var(--border-sm) var(--border-sm) var(--border-sm) var(--border-0);
 }
 
+footer {
+    background-color: var(--colors-primary-500);
+    padding: var(--spacing-8) var(--spacing-8);
+    text-align: center;
+    color: var(--colors-white);
+}
+
+.footer-links {
+    margin-top: var(--spacing-4);
+
+    display: flex; 
+    gap: var(--spacing-8);
+    justify-content: center;
+    align-items: center;
+
+    li {
+        border: var(--colors-dim-orange) solid 2px;
+        background-color: var(--colors-dim-orange);
+        border-radius: var(--border-full);
+        width: 2.5rem;
+        height: 2.5rem;
+        cursor: pointer;
+        transition: .2s;
+
+        /* Flex parent */
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+    }
+}
+
