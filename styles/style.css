@@ -55,6 +55,7 @@ body {
     --colors-dim-800: #262626; 
     --colors-black: #000000; 
     --colors-white: #ffffff;
+    --colors-dim-orange: #F0CCB6;
 
     /* fonts */
     --font-family-regular: 'Noto Sans Regular';
@@ -146,10 +147,21 @@ a {
     color: inherit;
     text-decoration: none;
     font-family: 'Noto Sans Semibold';
+    transition: .2s;
 }
+
+a:hover {
+    color: var(--colors-primary-600);
+}
+
+
 
 ul {
     list-style-type: none;
+}
+
+p {
+    margin-top: var(--spacing-4);
 }
 
 .button {
@@ -261,14 +273,6 @@ nav {
     padding: var(--spacing-2) var(--spacing-4);
 }
 
-.menu-items li{
-    transition: .2s;
-}
-
-.menu-items li:hover {
-    color: var(--colors-primary-600);
-}
-
 .menu-items li::before {
     content: "";
     background-image: url("../assests/arrow-side.svg");
@@ -314,7 +318,7 @@ nav {
 
 .heading-slider {
     background-color: var(--colors-primary-500);
-    padding: var(--spacing-2) var(--spacing-0);
+    padding: var(--spacing-4) var(--spacing-0);
 }
 
 .heading-slider li {
@@ -326,4 +330,45 @@ nav {
 
 .side-figure {
     display: none; 
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+}
+
+.about-text {
+    margin-top: var(--spacing-8);
+    background-color: var(--colors-dim-orange);
+    padding: var(--spacing-8) var(--spacing-4);
+    border-radius: var(--border-md) var(--border-md) var(--border-md) var(--border-0);
+    width: 85vw;
+}
+
+.about-button {
+    border-radius: var(--border-sm) var(--border-sm) var(--border-sm) var(--border-0);
+    
+    position: absolute;
+    bottom: 0;
+    translate: 0 50%;
+
+    /* Flex parent */
+    display: flex; 
+    align-items: center;
+}
+
+.about-button:hover {
+    background-color: var(--colors-white);
+}
+
+.about-slider {
+    margin-top: calc((var(--spacing-8) + 24px))
+}
+
+.about-slider img {
+    display: block;
+    width: 80%;
 }
