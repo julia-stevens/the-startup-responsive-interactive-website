@@ -1,219 +1,219 @@
-/* Noto Sans */
-@font-face {
-font-family: 'Noto Sans Regular';
-font-weight: var(--font-weight-regular);
-src: url("../assests/fonts/noto-sans/notosans-400.woff2") format("woff2");
-}
+    /* Noto Sans */
+    @font-face {
+    font-family: 'Noto Sans Regular';
+    font-weight: var(--font-weight-regular);
+    src: url("../assests/fonts/noto-sans/notosans-400.woff2") format("woff2");
+    }
 
 
-@font-face {
-font-family: 'Noto Sans Semibold';
-font-weight: var(--font-family-semibold);
-src: url("../assests/fonts/noto-sans/notosans-600.woff2") format("woff2");
-}
+    @font-face {
+    font-family: 'Noto Sans Semibold';
+    font-weight: var(--font-family-semibold);
+    src: url("../assests/fonts/noto-sans/notosans-600.woff2") format("woff2");
+    }
 
 
-@font-face {
-font-family: 'Noto Sans Bold';
-font-weight: var(--font-weight-bold);
-src: url("../assests/fonts/noto-sans/notosans-700.woff2") format("woff2");
-}
+    @font-face {
+    font-family: 'Noto Sans Bold';
+    font-weight: var(--font-weight-bold);
+    src: url("../assests/fonts/noto-sans/notosans-700.woff2") format("woff2");
+    }
 
-/* Anek */
-@font-face {
-    font-family: 'Anek';
-    src: url("../assests/fonts/anek/anek-650.woff2") format("woff2");
-}
+    /* Anek */
+    @font-face {
+        font-family: 'Anek';
+        src: url("../assests/fonts/anek/anek-650.woff2") format("woff2");
+    }
 
-* {
-    box-sizing: border-box; 
-    margin: 0; 
-    padding: 0; 
-}
+    * {
+        box-sizing: border-box; 
+        margin: 0; 
+        padding: 0; 
+    }
 
-body { 
-    /* colors */
-    --colors-primary-500: #e8712c; 
-    --colors-primary-600: #b65100; 
-    --colors-secondary-500: #ffdd00; 
-    --colors-info-100: #eef6fc; 
-    --colors-info-500: #00a4e5;
-    --colors-info-600: #008cc9;
-    --colors-success-100: #f9fff0; 
-    --colors-success-500: #80ce00;
-    --colors-success-600: #66ad00;
-    --colors-warning-100: #fffdf2;  
-    --colors-warning-500: #ffdd00; 
-    --colors-warning-600: #b89900; 
-    --colors-error-100: #fff2f2; 
-    --colors-error-400: #eb6668; 
-    --colors-error-500: #e33537; 
-    --colors-error-600: #cd1316; 
-    --colors-dim-100: #f7f7f8; 
-    --colors-dim-200: #dbdadd; 
-    --colors-dim-500: #9f9f9f; 
-    --colors-dim-800: #262626; 
-    --colors-black: #000000; 
-    --colors-white: #ffffff;
+    body { 
+        /* colors */
+        --colors-primary-500: #e8712c; 
+        --colors-primary-600: #b65100; 
+        --colors-secondary-500: #ffdd00; 
+        --colors-info-100: #eef6fc; 
+        --colors-info-500: #00a4e5;
+        --colors-info-600: #008cc9;
+        --colors-success-100: #f9fff0; 
+        --colors-success-500: #80ce00;
+        --colors-success-600: #66ad00;
+        --colors-warning-100: #fffdf2;  
+        --colors-warning-500: #ffdd00; 
+        --colors-warning-600: #b89900; 
+        --colors-error-100: #fff2f2; 
+        --colors-error-400: #eb6668; 
+        --colors-error-500: #e33537; 
+        --colors-error-600: #cd1316; 
+        --colors-dim-100: #f7f7f8; 
+        --colors-dim-200: #dbdadd; 
+        --colors-dim-500: #9f9f9f; 
+        --colors-dim-800: #262626; 
+        --colors-black: #000000; 
+        --colors-white: #ffffff;
 
-    /* fonts */
-    --font-family-regular: 'Noto Sans Regular';
-    --font-family-semibold: 'Noto Sans Semibold';
-    --font-family-bold: 'Noto Sans Bold';
-    --heading-font-family: 'Anek';
+        /* fonts */
+        --font-family-regular: 'Noto Sans Regular';
+        --font-family-semibold: 'Noto Sans Semibold';
+        --font-family-bold: 'Noto Sans Bold';
+        --heading-font-family: 'Anek';
 
-    /* font weights */
-    --font-weight-normal: 400; 
-    --font-weight-semibold: 600; 
-    --font-weight-bold: 700;
+        /* font weights */
+        --font-weight-normal: 400; 
+        --font-weight-semibold: 600; 
+        --font-weight-bold: 700;
 
-    /* font sizes */
-    --primary-heading-s: 20px; 
-    --primary-heading-m: 24px; 
-    --primary-heading-l: 36px; 
-    --primary-heading-xl: 48px; 
+        /* font sizes */
+        --primary-heading-s: 20px; 
+        --primary-heading-m: 24px; 
+        --primary-heading-l: 36px; 
+        --primary-heading-xl: 48px; 
 
-    --body-heading-s: 16px;
-    --body-heading-m: 18px;
-    --body-heading-l: 24px;
-    --body-heading-xl: 36px;
+        --body-heading-s: 16px;
+        --body-heading-m: 18px;
+        --body-heading-l: 24px;
+        --body-heading-xl: 36px;
 
-    --body-text-xs: 12px; 
-    --body-text-sm: 14px; 
-    --body-text-md: 16px; 
-    --body-text-lg: 18px; 
-    --body-text-xl: 20px;  
+        --body-text-xs: 12px; 
+        --body-text-sm: 14px; 
+        --body-text-md: 16px; 
+        --body-text-lg: 18px; 
+        --body-text-xl: 20px;  
 
-    /* borders */
-    --border-0: 0px; 
-    --border-xs: .125rem;
-    --border-sm: .25rem;
-    --border-md: 1rem;
-    --border-lg: 1.5rem;
-    --border-full: 9999px;
+        /* borders */
+        --border-0: 0px; 
+        --border-xs: .125rem;
+        --border-sm: .25rem;
+        --border-md: 1rem;
+        --border-lg: 1.5rem;
+        --border-full: 9999px;
 
-    /* breakpoints */
-    /* --breakpoint-sm: 576px; 
-    --breakpoint-md: 768px; 
-    --breakpoint-lg: 992px; 
-    --breakpoint-xl: 1200px; 
-    --breakpoint-2xl: 1400px;  */
+        /* breakpoints */
+        /* --breakpoint-sm: 576px; 
+        --breakpoint-md: 768px; 
+        --breakpoint-lg: 992px; 
+        --breakpoint-xl: 1200px; 
+        --breakpoint-2xl: 1400px;  */
 
-    /* spacing */ 
-    --px: 1px; 
-    --em: 1em;
-    --spacing-0: 0; 
-    --spacing-05: .125rem; 
-    --spacing-1: .25rem; 
-    --spacing-2: .5rem; 
-    --spacing-3: .75rem; 
-    --spacing-4: 1rem; 
-    --spacing-5: 1.25rem; 
-    --spacing-6: 1.5rem; 
-    --spacing-7: 1.75rem; 
-    --spacing-8: 2rem; 
-    --spacing-9: 2.25rem; 
-    --spacing-10: 2.5rem; 
-    --spacing-11: 2.75rem; 
-    --spacing-12: 3rem; 
-    --spacing-14: 3.5rem; 
-    --spacing-16: 4rem; 
-    --spacing-20: 5rem; 
-    --spacing-24: 6rem; 
-    --spacing-28: 7rem; 
-    --spacing-32: 8rem; 
-    --spacing-36: 9rem; 
-    --spacing-40: 10rem; 
-    --spacing-44: 11rem; 
-    --spacing-48: 12rem; 
-    --spacing-52: 13rem; 
-    --spacing-56: 14rem; 
-    --spacing-60: 15rem; 
-    --spacing-64: 16rem; 
-    --spacing-72: 18rem; 
-    --spacing-80: 20rem; 
-    --spacing-96: 24rem; 
+        /* spacing */ 
+        --px: 1px; 
+        --em: 1em;
+        --spacing-0: 0; 
+        --spacing-05: .125rem; 
+        --spacing-1: .25rem; 
+        --spacing-2: .5rem; 
+        --spacing-3: .75rem; 
+        --spacing-4: 1rem; 
+        --spacing-5: 1.25rem; 
+        --spacing-6: 1.5rem; 
+        --spacing-7: 1.75rem; 
+        --spacing-8: 2rem; 
+        --spacing-9: 2.25rem; 
+        --spacing-10: 2.5rem; 
+        --spacing-11: 2.75rem; 
+        --spacing-12: 3rem; 
+        --spacing-14: 3.5rem; 
+        --spacing-16: 4rem; 
+        --spacing-20: 5rem; 
+        --spacing-24: 6rem; 
+        --spacing-28: 7rem; 
+        --spacing-32: 8rem; 
+        --spacing-36: 9rem; 
+        --spacing-40: 10rem; 
+        --spacing-44: 11rem; 
+        --spacing-48: 12rem; 
+        --spacing-52: 13rem; 
+        --spacing-56: 14rem; 
+        --spacing-60: 15rem; 
+        --spacing-64: 16rem; 
+        --spacing-72: 18rem; 
+        --spacing-80: 20rem; 
+        --spacing-96: 24rem; 
 
-    font-family: var(--font-family-regular);
-    font-size: var(--display-heading-s);
-}
+        font-family: var(--font-family-regular);
+        font-size: var(--display-heading-s);
+    }
 
-h1, h2, h3, h4 {
-    font-family: var(--heading-font-family);
-}
+    h1, h2, h3, h4 {
+        font-family: var(--heading-font-family);
+    }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
 
-.button {
-    background-color: var(--colors-primary-500);
-    border: solid;
-    height: var(--spacing-12);    
-}
- 
-/* forms */
-.text-input {
-    border: var(--colors-dim-800) solid 1px;
-    border-radius: var(--border-md);
-}
+    .button {
+        background-color: var(--colors-primary-500);
+        border: solid;
+        height: var(--spacing-12);    
+    }
+    
+    /* forms */
+    .text-input {
+        border: var(--colors-dim-800) solid 1px;
+        border-radius: var(--border-md);
+    }
 
-.text-input:hover {
-    border-color: var(--colors-primary-500);
-}
+    .text-input:hover {
+        border-color: var(--colors-primary-500);
+    }
 
-.text-input:focus {
-    outline-color: var(--colors-primary-500);
-}
+    .text-input:focus {
+        outline-color: var(--colors-primary-500);
+    }
 
-.text-input:user-invalid {
-    background-color: var(--colors-error-100);
-    border-color: var(--colors-error-600);
-}
+    .text-input:user-invalid {
+        background-color: var(--colors-error-100);
+        border-color: var(--colors-error-600);
+    }
 
-.text-input:user-valid {
-    background-color: var(--colors-success-100);
-    border-color: var(--colors-success-500);
-}
+    .text-input:user-valid {
+        background-color: var(--colors-success-100);
+        border-color: var(--colors-success-500);
+    }
 
-.single-line-input {
-    height: var(--spacing-12);
-    padding: var(--spacing-0) var(--spacing-5);
-}
+    .single-line-input {
+        height: var(--spacing-12);
+        padding: var(--spacing-0) var(--spacing-5);
+    }
 
-.multiple-line-input {
-    min-height: var(--spacing-12);
-    padding: var(--spacing-3) var(--spacing-5);
-}
+    .multiple-line-input {
+        min-height: var(--spacing-12);
+        padding: var(--spacing-3) var(--spacing-5);
+    }
 
-.button {
-    height: var(--spacing-12);
-    padding: var(--spacing-0) var(--spacing-4);
-    border: var(--colors-primary-500) solid 2px;
-    border-radius: var(--border-sm);
-    font-weight: var(--font-weight-semibold);
-    font-size: var(--body-text-md);
-    transition: .2s; 
-    cursor: pointer; 
-}
+    .button {
+        height: var(--spacing-12);
+        padding: var(--spacing-0) var(--spacing-4);
+        border: var(--colors-primary-500) solid 2px;
+        border-radius: var(--border-sm);
+        font-weight: var(--font-weight-semibold);
+        font-size: var(--body-text-md);
+        transition: .2s; 
+        cursor: pointer; 
+    }
 
-.primary-button {
-    background-color: var(--colors-primary-500);
-    color: var(--colors-white);
-}
+    .primary-button {
+        background-color: var(--colors-primary-500);
+        color: var(--colors-white);
+    }
 
-.primary-button:hover {
-    background-color: var(--colors-primary-600);
-    border-color: var(--colors-primary-600);
-}
+    .primary-button:hover {
+        background-color: var(--colors-primary-600);
+        border-color: var(--colors-primary-600);
+    }
 
-.secondary-button {
-    background-color: var(--colors-white);
-    color: var(--colors-black);    
-}
+    .secondary-button {
+        background-color: var(--colors-white);
+        color: var(--colors-black);    
+    }
 
-.secondary-button:hover {
-    color: var(--colors-primary-500);
-    border-color: var(--colors-primary-600);
-}
+    .secondary-button:hover {
+        color: var(--colors-primary-500);
+        border-color: var(--colors-primary-600);
+    }
