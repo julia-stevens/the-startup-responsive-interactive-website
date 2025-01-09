@@ -36,10 +36,10 @@
             </div>
 
             <ul class="heading-slider">
-                <li><img src="./assests/checkmark.svg" alt="" width="15px">Wij blijven groeien</li>
-                <li><img src="./assests/checkmark.svg" alt="" width="15px">Wij doen het samen</li>
-                <li><img src="./assests/checkmark.svg" alt="" width="15px">Wij kennen de bestemming</li>
-                <li><img src="./assests/checkmark.svg" alt="" width="15px">Wij maken het waar</li>
+                <li><img src="./assests/checkmark.svg" alt="" width="15">Wij blijven groeien</li>
+                <li><img src="./assests/checkmark.svg" alt="" width="15">Wij doen het samen</li>
+                <li><img src="./assests/checkmark.svg" alt="" width="15">Wij kennen de bestemming</li>
+                <li><img src="./assests/checkmark.svg" alt="" width="15">Wij maken het waar</li>
             </ul>
 
             <img src="./assests/side-figure.svg" alt="" width="50" class="side-figure">
@@ -75,197 +75,236 @@
             </li>
         </ul>
 
-        <section id="vacatures">
+        <section id="vacatures" class="vacancies">
             <h2>Onze Vacatures</h2>
-            <form>
-                <fieldset>
-                    <legend>Filter de vacatures:</legend>
-                
-                    <div class="filters">
-                        <div class="button secondary-button">
-                            <input type="radio" name="filter" id="department" checked>
-                            <label for="department">Afdeling</label>
-                        </div>
-
-                        <div class="button secondary-button">
-                            <input type="radio" name="filter" id="location">
-                            <label for="location">Plaats</label>
-                        </div>
-
-                        <div class="button secondary-button">
-                            <input type="radio" name="filter" id="vacancy">
-                            <label for="vacancy">Vacature type</label>
-                        </div>
+            <form class="form-vacancies-filter">
+                <!-- <legend>Filter de vacatures:</legend> -->
+            
+                <div class="filters">
+                    <div class="button secondary-button vacancy-filter">
+                        <input type="radio" name="filter" id="department" checked>
+                        <label for="department">Afdeling</label>
                     </div>
 
-                    <div>
-                        <button type="submit" class="button primary-button">Filter</button>
+                    <div class="button secondary-button vacancy-filter">
+                        <input type="radio" name="filter" id="location">
+                        <label for="location">Plaats</label>
                     </div>
-                </fieldset>
+
+                    <div class="button secondary-button vacancy-filter">
+                        <input type="radio" name="filter" id="vacancy">
+                        <label for="vacancy">Vacature type</label>
+                    </div>
+                </div>
+
+                <!-- <div>
+                    <button type="submit" class="button primary-button">Filter</button>
+                </div> -->
             </form>
 
-            <img src="./assests/background-ink.svg" alt="" width="100"> <!-- svg met achtergrond afbeelding -->
-            <img src="./assests/side-figure.svg" alt="" width="50">
+            <img src="./assests/background-ink.svg" alt="" width="100" class="large-bg-ink-vacancies1"> <!-- svg met achtergrond afbeelding -->
+
+            <img src="./assests/background-ink.svg" alt="" width="100" class="large-bg-ink-vacancies2"> <!-- svg met achtergrond afbeelding -->
+
+            <img src="./assests/background-ink.svg" alt="" width="100" class="large-bg-ink-vacancies3"> <!-- svg met achtergrond afbeelding -->
+
+            <img src="./assests/side-figure.svg" alt="" width="50" class="side-image-vacancies">
 
             <!-- customer care -->
-            <section>
+            <section class="vacancy">
                 <h3>Customer Care</h3>
 
-                <article>
-                    <h4>Customer Care Specialist</h4>
-                    <p>Fulltime / Parttime</p>
-                    <p>Drukwerkdeal, Deventer</p>
+                <article class="vacancy-content">
+                    <a href="">
+                        <h4>Customer Care Specialist</h4>
+                        <p>Fulltime / Parttime</p>
+                        <p>Drukwerkdeal, Deventer</p>
+                    </a>
                 </article>
             </section>
 
             <!-- development -->
-            <section>
+            <section class="vacancy">
                 <h3>Development</h3>
 
-                <article>
-                    <h4>Software Engineer</h4>
-                    <p>Fulltime / Parttime</p>
-                    <p>Drukwerkdeal, Deventer</p>
+                <article class="vacancy-content">
+                    <a href="">
+                        <h4>Software Engineer</h4>
+                        <p>Fulltime / Parttime</p>
+                        <p>Drukwerkdeal, Deventer</p>
+                    </a>
                 </article>
 
-                <article>
-                    <h4>Stage Software Engineering/Development</h4>
-                    <p>Fulltime / Parttime</p>
-                    <p>Drukwerkdeal, Deventer</p>
+                <article class="vacancy-content">
+                    <a href="">
+                        <h4>Stage Software Engineering/Development</h4>
+                        <p>Fulltime / Parttime</p>
+                        <p>Drukwerkdeal, Deventer</p>
+                    </a>
                 </article>
             </section>
 
             <!-- finance -->
-            <section>
+            <section class="vacancy">
                 <h3>Finance</h3>
 
-                <article>
-                    <h4>Stage Finance</h4>
-                    <p>Fulltime / Parttime</p>
-                    <p>Drukwerkdeal, Deventer</p>
+                <article class="vacancy-content">
+                    <a href="">
+                        <h4>Stage Finance</h4>
+                        <p>Fulltime / Parttime</p>
+                        <p>Drukwerkdeal, Deventer</p>
+                    </a>
                 </article>
 
-                <article>
-                    <h4>Business Controller</h4>
-                    <p>Fulltime / Parttime</p>
-                    <p>Drukwerkdeal, Deventer</p>
+                <article class="vacancy-content">
+                    <a href="">
+                        <h4>Business Controller</h4>
+                        <p>Fulltime / Parttime</p>
+                        <p>Drukwerkdeal, Deventer</p>
+                    </a>
                 </article>
             </section>
 
             <!-- HR -->
-            <section>
+            <section class="vacancy">
                 <h3>HR</h3>
 
-                <article>
-                    <h4>Casemanager Verzuim</h4>
-                    <p>Parttime</p>
-                    <p>Drukwerkdeal, Deventer</p>
+                <article class="vacancy-content">
+                    <a href="">
+                        <h4>Casemanager Verzuim</h4>
+                        <p>Parttime</p>
+                        <p>Drukwerkdeal, Deventer</p>
+                    </a>
                 </article>
             </section>
 
             <!-- IT -->
-            <section>
+            <section class="vacancy">
                 <h3>IT</h3>
 
-                <article>
-                    <h4>Functioneel Applicatiebeheerder</h4>
-                    <p>Fulltime / Parttime</p>
-                    <p>Drukwerkdeal, Deventer</p>
+                <article class="vacancy-content">
+                    <a href="">
+                        <h4>Functioneel Applicatiebeheerder</h4>
+                        <p>Fulltime / Parttime</p>
+                        <p>Drukwerkdeal, Deventer</p>
+                    </a>
                 </article>
             </section>
 
             <!-- marketing -->
-            <section>
+            <section class="vacancy">
                 <h3>Marketing</h3>
 
-                <article>
-                    <h4>Content Marketeer</h4>
-                    <p>Fulltime / Parttime</p>
-                    <p>Drukwerkdeal, Deventer</p>
+                <article class="vacancy-content">
+                    <a href="">
+                        <h4>Content Marketeer</h4>
+                        <p>Fulltime / Parttime</p>
+                        <p>Drukwerkdeal, Deventer</p>
+                    </a>
                 </article>
             </section>
 
             <!-- productie -->
-            <section>
+            <section class="vacancy">
                 <h3>Productie</h3>
 
-                <article>
-                    <h4>Snijder</h4>
-                    <p>Fulltime</p>
-                    <p>Drukwerkdeal, Deventer</p>
+                <article class="vacancy-content">
+                    <a href="">
+                        <h4>Snijder</h4>
+                        <p>Fulltime</p>
+                        <p>Drukwerkdeal, Deventer</p>
+                    </a>
                 </article>
 
-                <article>
-                    <h4>Process Engineer</h4>
-                    <p>Fulltime / Parttime</p>
-                    <p>Drukwerkdeal, Deventer</p>
+                <article class="vacancy-content">
+                    <a href="">
+                        <h4>Process Engineer</h4>
+                        <p>Fulltime / Parttime</p>
+                        <p>Drukwerkdeal, Deventer</p>
+                    </a>
                 </article>
             </section>
 
             <!-- supply chain management -->
-            <section>
+            <section class="vacancy">
                 <h3>Supply Chain Management</h3>
 
-                <article>
-                    <h4>Medior Inkoper</h4>
-                    <p>Fulltime</p>
-                    <p>Drukwerkdeal, Deventer</p>
+                <article class="vacancy-content">
+                    <a href="">
+                        <h4>Medior Inkoper</h4>
+                        <p>Fulltime</p>
+                        <p>Drukwerkdeal, Deventer</p>
+                    </a>
                 </article>
 
-                <article>
-                    <h4>Stage duurzaamheidsafdeling</h4>
-                    <p>Fulltime / Parttime</p>
-                    <p>Drukwerkdeal, Deventer</p>
+                <article class="vacancy-content">
+                    <a href="">
+                        <h4>Stage duurzaamheidsafdeling</h4>
+                        <p>Fulltime / Parttime</p>
+                        <p>Drukwerkdeal, Deventer</p>
+                    </a>
                 </article>
             </section>
 
             <!-- algemeen -->
-            <section>
+            <section class="vacancy">
                 <h3>Algemeen</h3>
 
-                <article>
-                    <h4>Open sollicitatie</h4>
-                    <p>Fulltime</p>
+                <article class="vacancy-content">
+                    <a href="">
+                        <h4>Open sollicitatie</h4>
+                        <p>Fulltime</p>
+                    </a>
                 </article>
 
-                <article>
-                    <h4>Business Developer</h4>
-                    <p>Fulltime / Parttime</p>
-                    <p>Drukwerkdeal, Deventer</p>
+                <article class="vacancy-content">
+                    <a href="">
+                        <h4>Business Developer</h4>
+                        <p>Fulltime / Parttime</p>
+                        <p>Drukwerkdeal, Deventer</p>
+                    </a>
                 </article>
             </section>
 
             <!-- shop management -->
-            <section>
+            <section class="vacancy">
                 <h3>Shop Management</h3>
 
-                <article>
-                    <h4>UX Desiner</h4>
-                    <p>Fulltime / Parttime</p>
-                    <p>Printdeal.be, Antwerpen</p>
+                <article class="vacancy-content">
+                    <a href="">
+                        <h4>UX Desiner</h4>
+                        <p>Fulltime / Parttime</p>
+                        <p>Printdeal.be, Antwerpen</p>
+                    </a>
                 </article>
 
-                <article>
-                    <h4>UX Designer</h4>
-                    <p>Fulltime / Parttime</p>
-                    <p>Drukwerkdeal, Deventer</p>
+                <article class="vacancy-content">
+                    <a href="">
+                        <h4>UX Designer</h4>
+                        <p>Fulltime / Parttime</p>
+                        <p>Drukwerkdeal, Deventer</p>
+                    </a>
                 </article>
             </section>
 
             <!-- product management -->
-            <section>
+            <section class="vacancy">
                 <h3>Product Management</h3>
 
-                <article>
-                    <h4>Pricing Specialist</h4>
-                    <p>Fulltime / Parttime</p>
-                    <p>Drukwerkdeal, Deventer</p>
+                <article class="vacancy-content">
+                    <a href="">
+                        <h4>Pricing Specialist</h4>
+                        <p>Fulltime / Parttime</p>
+                        <p>Drukwerkdeal, Deventer</p>
+                    </a>
                 </article>
 
-                <article>
-                    <h4>Category Manager Services</h4>
-                    <p>Fulltime / Parttime</p>
-                    <p>Drukwerkdeal, Deventer</p>
+                <article class="vacancy-content">
+                    <a href="">
+                        <h4>Category Manager Services</h4>
+                        <p>Fulltime / Parttime</p>
+                        <p>Drukwerkdeal, Deventer</p>
+                    </a>
                 </article>
             </section>
         </section>
