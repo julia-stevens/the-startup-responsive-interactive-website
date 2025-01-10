@@ -598,6 +598,30 @@ input[type="radio"] {
     opacity: .5;
     top: -5%;
     right: -100%;
+
+    @media screen and (min-width: 680px) {
+        right: -80%;
+    }
+
+    @media screen and (min-width: 800px) {
+        right: -70%;
+    }
+
+    @media screen and (min-width: 920px) {
+        right: -60%;
+    }
+
+    @media screen and (min-width: 1040px) {
+        right: -50%;
+    }
+
+    @media screen and (min-width: 1440px) {
+        right: -60%;
+    }
+
+    @media screen and (min-width: 1660px) {
+        right: -70%;
+    }
 }
 
 .large-bg-ink-vacancies2 {
@@ -607,7 +631,29 @@ input[type="radio"] {
     width: 800px;
     opacity: .5;
     top: 30%;
-    left: -110%;
+    @media screen and (min-width: 680px) {
+        left: -80%;
+    }
+
+    @media screen and (min-width: 800px) {
+        left: -70%;
+    }
+
+    @media screen and (min-width: 920px) {
+        left: -60%;
+    }
+
+    @media screen and (min-width: 1040px) {
+        left: -50%;
+    }
+
+    @media screen and (min-width: 1440px) {
+        left: -60%;
+    }
+
+    @media screen and (min-width: 1660px) {
+        left: -70%;
+    }
 }
 
 .large-bg-ink-vacancies3 {
@@ -617,7 +663,29 @@ input[type="radio"] {
     width: 800px;
     opacity: .5;
     top: 70%;
-    right: -100%;
+    @media screen and (min-width: 680px) {
+        right: -80%;
+    }
+
+    @media screen and (min-width: 800px) {
+        right: -70%;
+    }
+
+    @media screen and (min-width: 920px) {
+        right: -60%;
+    }
+
+    @media screen and (min-width: 1040px) {
+        right: -50%;
+    }
+
+    @media screen and (min-width: 1440px) {
+        right: -60%;
+    }
+
+    @media screen and (min-width: 1660px) {
+        right: -70%;
+    }
 }
 
 .quote {
@@ -632,8 +700,6 @@ input[type="radio"] {
     h2 {
         display: none;
     }
-
-
 }
 
 .quote figure {
