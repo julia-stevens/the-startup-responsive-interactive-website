@@ -444,6 +444,10 @@ nav {
 
 .about-slider {
     margin-top: calc((var(--spacing-8) + 24px));
+
+    @media screen and (min-width: 850px) {
+        margin-top: 0; 
+    }
 }
 
 .about-slider img {
@@ -452,6 +456,10 @@ nav {
 
     position: relative;
     z-index: 2;
+
+    @media screen and (min-width: 600px) {
+        max-width: 466.398px;
+    }
 }
 
 .vacancies {
