@@ -470,6 +470,11 @@ nav {
 
     left: 50%;
     translate: -50% 0;
+
+    @media screen and (min-width: 1100px) {
+        width: 1100px;
+        padding: var(--spacing-0) var(--spacing-4);
+    }
 }
 
 .form-vacancies-filter {
@@ -483,6 +488,10 @@ nav {
     display: flex; 
     flex-direction: column;
     gap: var(--spacing-4);
+
+    @media screen and (min-width: 420px) {
+        flex-direction: row; 
+    }
 }
 
 .vacancy-filter {
@@ -537,8 +546,44 @@ input[type="radio"] {
     }
 }
 
+.vacancy-content p, a {
+    @media screen and (min-width: 1000px) {
+        margin: 0; 
+        padding: 0; 
+    }
+}
+
 .vacancy-content:hover {
     background-color: var(--colors-white);
+}
+
+.vacancy-content-a {
+    @media screen and (min-width: 450px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.vacancy-content-text {
+    @media screen and (min-width: 1000px) {
+        display: flex; 
+        align-items: center;
+        gap: var(--spacing-4);
+    }
+}
+
+.vacancy-employee {
+    display: none; 
+
+    @media screen and (min-width: 450px) {
+        display: inline;
+        width: 84.5px;
+        height: 84.5px;
+        border-radius: var(--border-full) var(--border-full) var(--border-0) var(--border-full);
+        object-fit: cover;
+    }
 }
 
 .side-image-vacancies {
