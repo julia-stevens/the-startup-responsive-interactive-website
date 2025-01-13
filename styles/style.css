@@ -355,17 +355,67 @@ nav {
     }
 }
 
-.heading-slider {
+.slider-header-container {
+    width: 100vw;
+    text-wrap: nowrap;
     background-color: var(--colors-primary-500);
-    padding: var(--spacing-4) var(--spacing-0);
+}
+
+.heading-slider {
+    padding: var(--spacing-4) var(--spacing-2);
+    width: calc(((var(--spacing-2) * 2) + 171.844px) * 4);
+
+    /* Flex parent */
+    display: flex; 
+    gap: var(--spacing-6);
+
+    --animation-xs: headerslider 5s linear infinite;
+    --animation-s: headerslider 5s linear infinite;
+    --animation-m: headerslider 8s linear infinite;
+    --animation-l: headerslider 8s linear infinite;
+    --animation-xl: headerslider 8s linear infinite;
+
+    animation: var(--animation-xs);
+
+    @media screen and (min-width: 580px) {
+        animation: var(--animation-s);
+    }
+
+    @media screen and (min-width: 900px) {
+        animation: var(--animation-m);
+    }
+
+    @media screen and (min-width: 1400px) {
+        animation: var(--animation-l);
+    }
+
+    @media screen and (min-width: 1600px) {
+        animation: var(--animation-xl);
+    }
+
+    @media screen and (prefers-reduced-motion) {
+        animation-play-state: paused;
+    }
+}
+
+@keyframes headerslider {
+    0% {
+        translate: 0 0;
+    }
+    100% {
+        translate: calc(100% / -3) 0%;
+    }
 }
 
 .heading-slider li {
+    color: var(--colors-white);
+
     /* Flex parent */
     display: flex; 
     align-items: center;
     gap: var(--spacing-2);
 }
+
 
 .side-figure-header {
     display: none; 
@@ -455,11 +505,11 @@ nav {
 
     width: calc(60vw * 7);
 
-    --animation-xs: bannermove 15s linear infinite;
-    --animation-s: bannermove 20s linear infinite;
-    --animation-m: bannermove 20s linear infinite;
-    --animation-l: bannermove 20s linear infinite;
-    --animation-xl: bannermove 20s linear infinite;
+    --animation-xs: bannermove 19s linear infinite;
+    --animation-s: bannermove 23s linear infinite;
+    --animation-m: bannermove 28s linear infinite;
+    --animation-l: bannermove 35s linear infinite;
+    --animation-xl: bannermove 42s linear infinite;
 
     animation: var(--animation-xs);
 
@@ -476,7 +526,7 @@ nav {
     }
 
     @media screen and (min-width: 1600px) {
-        animation: var(--animation-l);
+        animation: var(--animation-xl);
     }
 
     @media screen and (prefers-reduced-motion) {
