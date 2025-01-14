@@ -242,6 +242,7 @@ nav {
     max-width: 1100px;
     border-bottom: solid var(--colors-dim-200) calc(1.5 * var(--px));
     padding: var(--spacing-2) var(--spacing-4);
+    background-color: var(--colors-white);
     margin: 0 auto;
 
     /* Flex parent */
@@ -278,10 +279,38 @@ nav {
     }
 }
 
-.nav-links a:nth-child(3)::after {
-    @media screen and (min-width: 350px) {
-        content: "Menu";
+.nav-links button {
+    appearance: none;
+    border: none;
+    background-color: transparent;
+
+    display: flex; 
+    align-items: center;
+    gap: var(--spacing-2);
+
+    transition: .2s ease;
+
+    &:hover {
+        color: var(--colors-primary-600);
+        cursor: pointer;
     }
+
+}
+
+.nav-links button::after {
+    @media screen and (min-width: 350px) {
+        content: "Open menu";
+        font-family: var(--font-family-regular);
+        font-size: var(--body-text-md);
+    }
+}
+
+.nav-links button.openMenu::after {
+    @media screen and (min-width: 350px) {
+        content: "Sluit menu";
+        font-family: var(--font-family-regular);
+        font-size: var(--body-text-md);
+    }   
 }
 
 .logo img {
@@ -302,6 +331,20 @@ nav {
 .menu-items {
     border-bottom: solid var(--colors-dim-200) calc(1.5 * var(--px));
     padding: var(--spacing-2) var(--spacing-4);
+    background-color: var(--colors-white);
+
+    max-width: 1100px;
+    translate: -100% 0%;
+    transition: .3s ease;
+
+    position: fixed; 
+    width: 100%;
+    z-index: 4;
+}
+
+.menu-items.openMenu {
+    left: 50%;
+    translate: -50% 0%;
 }
 
 .menu-items li::before {
@@ -573,7 +616,82 @@ nav {
 }
 
 .form-vacancies-filter {
-    margin-top: var(--spacing-8);
+    background-image: linear-gradient(var(--colors-primary-500) 0 0);
+    background-size: 100% 0%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    transition: .3s background-size .3s;
+
+    padding: var(--spacing-6) var(--spacing-0);
+    border-radius: var(--border-0) var(--border-0) var(--border-sm) var(--border-0);
+
+    .vacancy-filter {
+        visibility: hidden;
+        transition-delay: .7s;
+    }
+}
+
+.form-vacancies-filter.openFilter {    
+    background-image: linear-gradient(var(--colors-primary-500) 0 0);
+    background-size: 100% 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+
+    .vacancy-filter {
+        visibility: visible;
+    }
+}
+
+.filter-button {
+    display: flex; 
+    justify-content: space-between;
+
+    background-image: linear-gradient(var(--colors-primary-500) 0 0);
+    background-size: 0% 100%;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    
+    border-radius: var(--border-sm) var(--border-sm) var(--border-0) var(--border-0);
+
+
+    transition: background-size .3s;
+
+    margin-top: var(--spacing-4);
+
+    button {
+        border-bottom-left-radius: var(--border-0);
+
+        display: flex; 
+        align-items: center;
+        gap: var(--spacing-2);
+
+        transition: .3s linear;
+    }
+}
+
+.filter-button.openFilter {
+    background-image: linear-gradient(var(--colors-primary-500) 0 0);
+    background-size: 100% 100%;
+    background-position: left center;
+    background-repeat: no-repeat;
+
+
+    button {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    img {
+        content: url("../assests/cross-white.svg");
+        width: 30px;
+    }
+
+    /* img::after {
+        content: "Sluit";
+        font-family: var(--font-family-regular);
+    } */
 }
 
 .filters {
@@ -586,16 +704,19 @@ nav {
 
     @media screen and (min-width: 420px) {
         flex-direction: row; 
+        justify-content: center;
     }
 }
 
-.vacancy-filter {
-    display: inline-flex;
-    align-items: center;
+input:checked + label {
+    background-color: var(--colors-primary-600);
+    color: var(--colors-white);
+    border: none;
 }
 
 .vacancy-filter label {
     cursor: pointer;
+    padding: var(--spacing-2) var(--spacing-4);
 }
 
 input[type="radio"] {
