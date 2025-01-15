@@ -281,8 +281,8 @@ nav {
 
 .nav-links button {
     appearance: none;
-    border: none;
-    background-color: transparent;
+    /* border: none;
+    background-color: transparent; */
 
     display: flex; 
     align-items: center;
@@ -313,7 +313,12 @@ nav {
     }   
 }
 
-.logo img {
+.nav-links button img.openMenu {
+    content: url("../assests/cross.svg");
+    width: 35px;
+}
+
+.logo img { 
     width: 150px;
 }
 
@@ -616,97 +621,321 @@ nav {
 }
 
 .form-vacancies-filter {
-    background-image: linear-gradient(var(--colors-primary-500) 0 0);
-    background-size: 100% 0%;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    transition: .3s background-size .3s;
-
     padding: var(--spacing-6) var(--spacing-0);
     border-radius: var(--border-0) var(--border-0) var(--border-sm) var(--border-0);
-
-    .vacancy-filter {
-        visibility: hidden;
-        transition-delay: .7s;
-    }
-}
-
-.form-vacancies-filter.openFilter {    
-    background-image: linear-gradient(var(--colors-primary-500) 0 0);
-    background-size: 100% 100%;
-    background-position: top;
-    background-repeat: no-repeat;
-
-    .vacancy-filter {
-        visibility: visible;
-    }
 }
 
 .filter-button {
     display: flex; 
     justify-content: space-between;
 
-    background-image: linear-gradient(var(--colors-primary-500) 0 0);
-    background-size: 0% 100%;
-    background-position: right bottom;
-    background-repeat: no-repeat;
-    
     border-radius: var(--border-sm) var(--border-sm) var(--border-0) var(--border-0);
 
-
-    transition: background-size .3s;
-
     margin-top: var(--spacing-4);
+    position: relative;
+    z-index: 2;
 
     button {
         border-bottom-left-radius: var(--border-0);
 
         display: flex; 
+        justify-content: space-between;
         align-items: center;
         gap: var(--spacing-2);
 
-        transition: .3s linear;
+        max-width: 1100px;
     }
 }
 
-.filter-button.openFilter {
-    background-image: linear-gradient(var(--colors-primary-500) 0 0);
-    background-size: 100% 100%;
-    background-position: left center;
-    background-repeat: no-repeat;
+.filter-button button.openMenu {
+    animation: changeButtonWidth .2s ease-in;
+    animation-fill-mode: forwards;
+}
 
+/* .filter-button button.closeMenu {
+    width: auto;
+    animation: 1s changeButtonWidthClose .2s;
+    animation-fill-mode: forwards;
+} */
 
-    button {
+@keyframes changeButtonWidth {
+    0% {
+        width: auto;
+    }
+    100% {
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-
     }
+}
 
-    img {
-        content: url("../assests/cross-white.svg");
-        width: 30px;
+/* @keyframes changeButtonWidthClose {
+    0% {
+        width: 100%;
     }
+    100% {
+        width: auto;
+    }
+} */
 
-    /* img::after {
-        content: "Sluit";
-        font-family: var(--font-family-regular);
-    } */
+.filters-container {
+    position: relative;
+
+    margin-bottom: var(--spacing-8);
 }
 
 .filters {
     width: 100%;
+    height: 100%;
+    visibility: visible;
 
     /* Flex parent */
     display: flex; 
     flex-direction: column;
+    align-items: center;
     gap: var(--spacing-4);
+    position: relative;
+    z-index: 2;
 
-    @media screen and (min-width: 420px) {
+    @media screen and (min-width: 425px) {
         flex-direction: row; 
         justify-content: center;
     }
+
+    .vacancy-filter {
+        height: 48px;
+    }
 }
+
+.form-vacancies-filter {
+    position: absolute;
+    width: 100%;
+    z-index: 1; 
+
+    translate: 0 -85%;
+
+    opacity: 0;
+
+
+    @media screen and (min-width: 425px) {
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+
+        translate: 0 -85%;
+
+        opacity: 0;
+    }
+}
+
+.form-vacancies-filter.openMenu {
+    animation: .4s dropItemsColumn .2s cubic-bezier(.12,.13,.81,1.49), .2s appear .2s;
+    animation-fill-mode: forwards;
+
+
+    @media screen and (min-width: 425px) {
+        animation: .4s dropItems .2s cubic-bezier(.12,.13,.81,1.49), .2s appear .2s;
+        animation-fill-mode: forwards;
+    }
+}
+
+.form-vacancies-filter.closeMenu {
+    animation: disappear .2s, liftItemsColumn .2s cubic-bezier(.12,.13,.81,1.49);
+    animation-fill-mode: forwards;
+
+    @media screen and (min-width: 425px) {
+        animation: disappear .2s, liftItems .2s cubic-bezier(.12,.13,.81,1.49);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes dropItems {
+    0% {
+        translate: 0% -85%;
+    }
+    100% {
+        translate: 0% 0%;
+    }
+}
+
+@keyframes liftItems {
+    0% {
+        translate: 0% 0%;
+    }
+    100% {
+        translate: 0% -85%;
+    }
+}
+
+@keyframes dropItemsColumn {
+    0% {
+        translate: 0% -85%;
+    }
+    100% {
+        translate: 0% 0%;
+    }
+}
+
+@keyframes liftItemsColumn {
+    0% {
+        translate: 0% 0%;
+    }
+    100% {
+        translate: 0% -85%;
+    }
+}
+
+.filters-bg {
+    background-color: var(--colors-primary-500);
+    border-radius: var(--border-sm) var(--border-sm) var(--border-sm) var(--border-0);
+
+    position: absolute;
+    z-index: 0;
+
+    width: 0%;
+    height: 48px;
+
+
+    max-width: 1068px;
+
+
+    @media screen and (min-width: 425px) {
+        width: 0%;
+        height: 48px;
+    }
+}
+
+.filters-bg.openMenu {
+    animation: toTheRight .2s, .2s toTheBottomSmall .2s;
+    animation-fill-mode: forwards;
+
+    @media screen and (min-width: 425px) {
+        animation: toTheRight .2s, .2s toTheBottom .2s;
+        animation-fill-mode: forwards;
+
+    max-width: 1068px;
+
+    }
+}
+
+.filters-bg.closeMenu {
+    animation: toTheTopSmall .2s, .4s toTheLeft .2s;
+    animation-fill-mode: forwards;
+    height: 265px;
+    width: 100%;
+
+    @media screen and (min-width: 425px) {
+        height: 117.5px;
+        width: 100%;
+        animation: toTheTop .2s, .4s toTheLeft .2s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes toTheRight {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes toTheLeft {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+    }
+}
+
+@keyframes toTheBottomSmall {
+    0% {
+        height: 48px;
+    }
+    100% {
+        height: 265px;
+    }
+}
+
+@keyframes toTheTopSmall {
+    0% {
+        height: 265px;
+    }
+    100% {
+        height: 48px;
+    }
+}
+
+@keyframes toTheBottom {
+    0% {
+        height: 48px;
+    }
+    100% {
+        height: 117.5px;
+    }
+}
+
+@keyframes toTheTop {
+    0% {
+        height: 117.5px;
+    }
+    100% {
+        height: 48px;
+    }
+}
+
+/* .filter-button span {
+    display: none;
+
+} */
+
+/* .filter-button span.openMenu {
+    display: inline;
+    font-size: var(--body-text-xs);
+} */
+
+
+.filter-button button img.openMenu {
+    animation: .6s changeIcon .1s; 
+    animation-fill-mode: forwards;
+}
+
+@keyframes changeIcon {
+    0% {
+
+    }
+    100% {
+        content: url("../assests/cross-white.svg");
+        width: 30px;
+
+    }
+}
+
+
 
 input:checked + label {
     background-color: var(--colors-primary-600);
@@ -724,7 +953,7 @@ input[type="radio"] {
 }
 
 .vacancy {
-    margin-top: var(--spacing-4);
+    margin-top: var(--spacing-8);
 
     h3 {
         font-family: var(--font-family-semibold);
@@ -1016,3 +1245,4 @@ footer {
         flex-direction: row;
     }
 }
+

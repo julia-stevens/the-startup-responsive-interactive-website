@@ -14,7 +14,7 @@
                 <div class="nav-links">
                     <a href="#"><img src="./assests/headset.svg" alt="Naar contact pagina" width="20"></a>
                     <a href="#"><img src="./assests/user.svg" alt="Naar log-in pagina" width="20"></a>
-                    <button><img src="./assests/hamburger.svg" alt="Open menu" width="20"></button>
+                    <button class="button secondary-button"><img src="./assests/hamburger.svg" alt="Open menu" width="20"></button>
                 </div>
             </nav>
 
@@ -124,32 +124,32 @@
             <section id="vacatures" class="vacancies">
                 <h2>Onze Vacatures</h2>
 
-                <div class="filter-button">
-                    <button class="button primary-button">Filter de vacatures<img src="./assests/filter.svg" alt="" width="20"></button>
+                <div class="filter-container">
+                    <div class="filters-bg"></div>
+                    <div class="filter-button">
+                        <button class="button primary-button">Filter de vacatures<img src="./assests/filter.svg" alt="" width="20"></button>
+                    </div>
+                    
+                    <form class="form-vacancies-filter">
+                        <div class="filters">
+                            <div class="vacancy-filter">
+                                <input type="radio" name="filter" id="department" checked>
+                                <label class="button secondary-button" for="department">Afdeling</label>
+                            </div>
+
+                            <div class="vacancy-filter">
+                                <input type="radio" name="filter" id="location">
+                                <label class="button secondary-button" for="location">Plaats</label>
+                            </div>
+
+                            <div class="vacancy-filter">
+                                <input type="radio" name="filter" id="vacancy">
+                                <label class="button secondary-button" for="vacancy">Vacature type</label>
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 
-                <form class="form-vacancies-filter">
-                    <div class="filters">
-                        <div class="vacancy-filter">
-                            <input type="radio" name="filter" id="department" checked>
-                            <label class="button secondary-button" for="department">Afdeling</label>
-                        </div>
-
-                        <div class="vacancy-filter">
-                            <input type="radio" name="filter" id="location">
-                            <label class="button secondary-button" for="location">Plaats</label>
-                        </div>
-
-                        <div class="vacancy-filter">
-                            <input type="radio" name="filter" id="vacancy">
-                            <label class="button secondary-button" for="vacancy">Vacature type</label>
-                        </div>
-                    </div>
-
-                    <!-- <div>
-                        <button type="submit" class="button primary-button">Filter</button>
-                    </div> -->
-                </form>
 
                 <!-- customer care -->
                 <section class="vacancy">
