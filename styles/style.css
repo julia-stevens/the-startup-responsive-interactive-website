@@ -234,7 +234,7 @@ header {
     position: relative;
 
     @media screen and (min-width: 1100px) {
-        height: 1069.19px;
+        height: 852px;
     }
 }
 
@@ -244,6 +244,8 @@ nav {
     padding: var(--spacing-2) var(--spacing-4);
     background-color: var(--colors-white);
     margin: 0 auto;
+    position: relative;
+    z-index: 999;
 
     /* Flex parent */
     display: flex; 
@@ -334,22 +336,40 @@ nav {
 }
 
 .menu-items {
-    border-bottom: solid var(--colors-dim-200) calc(1.5 * var(--px));
+    /* border-bottom: solid var(--colors-dim-200) calc(1.5 * var(--px)); */
     padding: var(--spacing-2) var(--spacing-4);
     background-color: var(--colors-white);
+    border-radius: var(--border-0) var(--border-0) var(--border-0) var(--border-md);
 
     max-width: 1100px;
-    translate: -100% 0%;
+    left: 50%;
+    translate: 100% 0%;
     transition: .3s ease;
 
     position: fixed; 
     width: 100%;
-    z-index: 4;
+    z-index: 99;
+
+    @media screen and (min-width: 700px) {
+        left: 0%;
+        right: 0%;
+        translate: 0% -200%;
+        display: flex;
+        gap: var(--spacing-4);
+
+        max-width: 1100px;
+        margin: 0 auto;
+    }
 }
 
 .menu-items.openMenu {
-    left: 50%;
-    translate: -50% 0%;
+    translate: 0% 0%;
+
+    @media screen and (min-width: 700px) {
+        left: 0%;
+        right: 0%;
+        translate: 0% 0%;
+    }
 }
 
 .menu-items li::before {
