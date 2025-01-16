@@ -9,6 +9,7 @@ const filterBg = document.querySelector(".filters-bg");
 const filterItems = document.querySelector(".form-vacancies-filter");
 const filterIcon = document.querySelector(".filter-button button img");
 const filterButtonBttn = document.querySelector(".filter-button button");
+const labelImageFilter = document.querySelector(".label-image span");
 // const filterImgSpan = document.querySelector(".filter-button span");
 
 
@@ -56,5 +57,6 @@ function filterItemsAnimationHandler() {
 function toggleFilterItems() {
     filterIcon.classList.toggle("openMenu");
     filterButtonBttn.classList.toggle("openMenu");
+    labelImageFilter.classList.toggle("openMenu");
     // filterImgSpan.classList.toggle("openMenu");
 }
