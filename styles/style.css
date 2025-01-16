@@ -697,8 +697,9 @@ nav {
     }
 } */
 
-.filters-container {
-    position: relative;
+.filter-container {
+    position: sticky;
+    top: var(--spacing-8); 
 
     margin-bottom: var(--spacing-8);
 }
