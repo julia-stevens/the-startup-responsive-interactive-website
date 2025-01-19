@@ -739,7 +739,7 @@ nav {
 
 .label-image span.openMenu {
     display: inline-flex;
-    animation: .4s imageLabelDelay .2s;
+    animation: .4s imageLabelDelay .2s ease-in;
 }
 
 .filters {
@@ -888,11 +888,11 @@ nav {
 }
 
 .filters-bg.openMenu {
-    animation: toTheRight .2s, .2s toTheBottomSmall .2s;
+    animation: toTheRight .2s ease-in, .2s toTheBottomSmall .2s ease-in;
     animation-fill-mode: forwards;
 
     @media screen and (min-width: 425px) {
-        animation: toTheRight .2s, .2s toTheBottom .2s;
+        animation: toTheRight .2s ease-in, .2s toTheBottom .2s ease-in;
         animation-fill-mode: forwards;
 
     max-width: 1068px;
@@ -901,7 +901,7 @@ nav {
 }
 
 .filters-bg.closeMenu {
-    animation: toTheTopSmall .2s, .4s toTheLeft .2s;
+    animation: toTheTopSmall .2s ease-in, .4s toTheLeft .2s ease-in;
     animation-fill-mode: forwards;
     height: 265px;
     width: 100%;
@@ -909,7 +909,7 @@ nav {
     @media screen and (min-width: 425px) {
         height: 117.5px;
         width: 100%;
-        animation: toTheTop .2s, .4s toTheLeft .2s;
+        animation: toTheTop .2s ease-in, .4s toTheLeft .2s ease-in;
         animation-fill-mode: forwards;
     }
 }
@@ -980,7 +980,7 @@ nav {
 
 
 .filter-button button img.openMenu {
-    animation: .6s changeIcon .1s; 
+    animation: .6s changeIcon .1s ease-in; 
     animation-fill-mode: forwards;
 }
 
