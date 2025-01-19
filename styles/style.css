@@ -1,7 +1,7 @@
 /* Noto Sans */
 @font-face {
 font-family: 'Noto Sans Regular';
-font-weight: var(--font-weight-regular);
+font-weight: var(--font-weight-normal);
 src: url("../assests/fonts/noto-sans/notosans-400.woff2") format("woff2");
 }
 
@@ -129,7 +129,7 @@ body {
     --spacing-96: 24rem; 
 
     font-family: var(--font-family-regular);
-    font-size: var(--display-heading-s);
+    font-size: var(--body-heading-s);
 
     overflow-x: hidden;
 }
