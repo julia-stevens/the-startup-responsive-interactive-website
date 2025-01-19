@@ -979,6 +979,12 @@ input:checked + label {
     background-color: var(--colors-primary-600);
     color: var(--colors-white);
     border: none;
+
+    transition: .2s ease-in;
+}
+
+input:checked + label:hover {
+    color: var(--colors-black);
 }
 
 .vacancy-filter label {
