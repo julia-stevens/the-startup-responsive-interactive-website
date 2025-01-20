@@ -9,9 +9,7 @@ const filterBg = document.querySelector(".filters-bg");
 const filterItems = document.querySelector(".form-vacancies-filter");
 const filterIcon = document.querySelector(".filter-button button img");
 const filterButtonBttn = document.querySelector(".filter-button button");
-const labelImageFilter = document.querySelector(".label-image span");
-// const filterImgSpan = document.querySelector(".filter-button span");
-
+const filterLabelImage = document.querySelector(".label-image span");
 
 // nav menu
 navMenuButton.addEventListener("click", toggleNavMenu);
@@ -27,14 +25,15 @@ function toggleNavMenu() {
     navMenuImg.classList.toggle("openMenu");
 }
 
+// filter menu
 function filterAnimationToggle() {
-    filterBackgroundAnimationHandler();
-    filterItemsAnimationHandler();
+    filterBackgroundAnimation();
+    filterItemsAnimation();
     toggleFilterItems();
 }
 
 // filter menu 
-function filterBackgroundAnimationHandler() {
+function filterBackgroundAnimation() {
     if (filterBg.classList.contains("openMenu")) {
         filterBg.classList.add("closeMenu");
         filterBg.classList.remove("openMenu");
@@ -44,7 +43,8 @@ function filterBackgroundAnimationHandler() {
     }
 }
 
-function filterItemsAnimationHandler() {
+// filter menu 
+function filterItemsAnimation() {
     if (filterItems.classList.contains("openMenu")) {
         filterItems.classList.add("closeMenu");
         filterItems.classList.remove("openMenu");
@@ -54,9 +54,9 @@ function filterItemsAnimationHandler() {
     }   
 }
 
+// filter menu 
 function toggleFilterItems() {
     filterIcon.classList.toggle("openMenu");
     filterButtonBttn.classList.toggle("openMenu");
-    labelImageFilter.classList.toggle("openMenu");
-    // filterImgSpan.classList.toggle("openMenu");
+    filterLabelImage.classList.toggle("openMenu");
 }
