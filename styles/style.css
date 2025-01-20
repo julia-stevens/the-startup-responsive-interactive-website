@@ -244,7 +244,6 @@ header {
     
         @media screen and (min-width: 1100px) {
             display: block;
-            position: relative;
             width: 300px;
             left: -5%;
             translate: 0 -200%;
@@ -258,7 +257,6 @@ nav {
     padding: var(--spacing-2) var(--spacing-4);
     background-color: var(--colors-white);
     margin: 0 auto;
-
     /* Flex parent */
     display: flex; 
     flex-direction: column;
@@ -297,12 +295,10 @@ nav {
         
         button {
             appearance: none;
-        
             /* Flex parent */
             display: flex; 
             align-items: center;
             gap: var(--spacing-2);
-        
             transition: .2s ease;
         
             &:hover {
@@ -321,8 +317,6 @@ nav {
             &.openMenu::after {
                 @media screen and (min-width: 350px) {
                     content: "Sluit menu";
-                    font-family: var(--font-family-regular);
-                    font-size: var(--body-text-md);
                 }   
             }
             
@@ -348,7 +342,6 @@ nav {
         padding: var(--spacing-2) var(--spacing-4);
         background-color: var(--colors-white);
         border-radius: var(--border-0) var(--border-0) var(--border-0) var(--border-md);
-
         max-width: 1100px;
         left: 50%;
         top: 65.6px;
@@ -356,7 +349,6 @@ nav {
         position: fixed; 
         width: 100%;
         z-index: 999;
-
         transition: .3s ease-in;
     
         @media screen and (min-width: 700px) {
@@ -365,7 +357,6 @@ nav {
             translate: 150% 0%;
             display: flex;
             gap: var(--spacing-4);
-    
             max-width: 1100px;
             margin: 0 auto;
         }
@@ -392,7 +383,6 @@ nav {
 
 .hero {
     position: relative;
-
     /* Flex parent */
     display: flex; 
     justify-content: center;
@@ -442,7 +432,6 @@ nav {
     .heading-slider {
         padding: var(--spacing-4) var(--spacing-2);
         width: calc(((var(--spacing-2) * 2) + 171.844px) * 4);
-    
         /* Flex parent */
         display: flex; 
         gap: var(--spacing-6);
@@ -482,7 +471,6 @@ nav {
 
         li {
             color: var(--colors-white);
-        
             /* Flex parent */
             display: flex; 
             align-items: center;
@@ -549,7 +537,6 @@ nav {
     margin-top: calc((var(--spacing-8) + 24px));
     overflow: hidden;
     width: 100vw;
-
     position: relative;
     z-index: 2;
 
@@ -561,7 +548,6 @@ nav {
         /* Flex parent */
         display: flex; 
         gap: 0;
-    
         width: calc(60vw * 7);
 
         img {
@@ -628,9 +614,7 @@ nav {
 .vacancies {
     margin-top: var(--spacing-8);
     position: relative;
-
     width: 85vw;
-
     left: 50%;
     translate: -50% 0;
 
@@ -642,19 +626,15 @@ nav {
     .filter-container {
         position: sticky;
         top: var(--spacing-8); 
-    
         margin-bottom: var(--spacing-8);
     
         .filters-bg {
             background-color: var(--colors-primary-500);
             border-radius: var(--border-sm) var(--border-sm) var(--border-sm) var(--border-0);
-        
             position: absolute;
             z-index: 0;
-        
             width: 0%;
             height: 48px;
-        
             max-width: 1068px;
         
             @media screen and (min-width: 425px) {
@@ -693,21 +673,18 @@ nav {
         .filter-button {
             display: flex; 
             justify-content: space-between;
-        
             border-radius: var(--border-sm) var(--border-sm) var(--border-0) var(--border-0);
-        
             margin-top: var(--spacing-4);
             position: relative;
             z-index: 2;
         
             button {
                 border-bottom-left-radius: var(--border-0);
-        
+                /* Flex parent */
                 display: flex; 
                 justify-content: space-between;
                 align-items: center;
                 gap: var(--spacing-2);
-        
                 max-width: 1100px;
             }
         
@@ -751,16 +728,13 @@ nav {
                 position: absolute;
                 width: 100%;
                 z-index: 1;
-        
                 translate: 0 -85%;
-        
                 opacity: 0;
             }
         
             &.openMenu {
                 animation: .4s dropItemsColumn .2s cubic-bezier(.12,.13,.81,1.49), .2s appear .2s;
                 animation-fill-mode: forwards;
-            
             
                 @media screen and (min-width: 425px) {
                     animation: .4s dropItems .2s cubic-bezier(.12,.13,.81,1.49), .2s appear .2s;
@@ -782,7 +756,6 @@ nav {
                 width: 100%;
                 height: 100%;
                 visibility: visible;
-            
                 /* Flex parent */
                 display: flex; 
                 flex-direction: column;
@@ -812,7 +785,6 @@ nav {
                         background-color: var(--colors-primary-600);
                         color: var(--colors-white);
                         border: none;
-                    
                         transition: .2s ease-in;
                     
                         &:hover {
@@ -981,7 +953,6 @@ nav {
 
     figure {
         margin-top: var(--spacing-4);
-    
         /* Flex parent */
         display: flex; 
         justify-content: space-between;
@@ -1053,7 +1024,7 @@ footer {
 
     .footer-links {
         margin-top: var(--spacing-4);
-    
+        /* Flex parent */
         display: flex; 
         flex-direction: column;
         gap: var(--spacing-8);
@@ -1068,7 +1039,6 @@ footer {
             height: 2.5rem;
             cursor: pointer;
             transition: .2s;
-    
             /* Flex parent */
             display: flex; 
             justify-content: center;
