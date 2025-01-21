@@ -23,7 +23,7 @@ header {
     .side-figure-header {
         display: none; 
     
-        @media screen and (min-width: 1100px) {
+        @media (min-width: 1100px) {
             display: block;
             position: absolute;
             width: 300px;
@@ -32,7 +32,7 @@ header {
         }
     }
 
-    @media screen and (min-width: 1100px) {
+    @media (min-width: 1100px) {
         height: 852px;
     }
 }
@@ -48,10 +48,9 @@ nav {
     flex-direction: column;
     align-items: center;
 
-    @media screen and (min-width: 456px) {
+    @media (min-width: 456px) {
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
     }
 
     a img { 
@@ -66,9 +65,8 @@ nav {
         align-items: center;
         gap: var(--spacing-4);
 
-        @media screen and (min-width: 300px) {
+        @media (min-width: 300px) {
             flex-direction: row;
-            justify-content: space-between;
             align-items: center;
         }
 
@@ -82,7 +80,7 @@ nav {
             align-items: center;
             gap: 0;
 
-            @media screen and (min-width: 600px) {
+            @media (min-width: 600px) {
                 width: 86px;
 
                 flex-direction: row;
@@ -121,7 +119,7 @@ nav {
                 width: 25px;
             }
 
-            @media screen and (min-width: 600px) {
+            @media (min-width: 600px) {
                 flex-direction: row;
                 justify-content: center;
                 gap: var(--spacing-2);
@@ -159,28 +157,27 @@ nav {
             visibility: visible;
             translate: 0% 0%;
         
-            @media screen and (min-width: 700px) {
+            @media (min-width: 700px) {
                 left: 0%;
                 right: 0%;
                 translate: 0% 0%;
             }
         }
 
-        @media screen and (min-width: 300px) {
+        @media (min-width: 300px) {
             top: 103.539px;
         }
 
-        @media screen and (min-width: 456px) {
+        @media (min-width: 456px) {
             top: 65.5px;
         }
     
-        @media screen and (min-width: 700px) {
+        @media (min-width: 700px) {
             left: 0%;
             right: 0%;
             translate: 150% 0%;
             display: flex;
             gap: var(--spacing-4);
-            max-width: 1100px;
             margin: 0 auto;
         }
     }
@@ -197,7 +194,7 @@ nav {
         height: auto;
         z-index: 2;
     
-        @media screen and (min-width: 1100px) {
+        @media (min-width: 1100px) {
             max-width: 1100px;
         }
     }
@@ -223,7 +220,7 @@ nav {
         height: 100%;
         z-index: 2;
     
-        @media screen and (min-width: 1100px) {
+        @media (min-width: 1100px) {
             max-width: 1100px;
         }
     }
@@ -257,23 +254,23 @@ nav {
             gap: var(--spacing-2);
         }
     
-        @media screen and (min-width: 580px) {
+        @media (min-width: 580px) {
             animation: var(--animation-s);
         }
     
-        @media screen and (min-width: 900px) {
+        @media (min-width: 900px) {
             animation: var(--animation-m);
         }
     
-        @media screen and (min-width: 1400px) {
+        @media (min-width: 1400px) {
             animation: var(--animation-l);
         }
     
-        @media screen and (min-width: 1600px) {
+        @media (min-width: 1600px) {
             animation: var(--animation-xl);
         }
     
-        @media screen and (prefers-reduced-motion) {
+        @media (prefers-reduced-motion) {
             animation-play-state: paused;
         }
     
@@ -292,7 +289,7 @@ nav {
     flex-direction: column;
     align-items: center;
 
-    @media screen and (min-width: 850px) {
+    @media (min-width: 850px) {
         background-color: var(--colors-dim-100);
     }
 
@@ -310,7 +307,7 @@ nav {
             text-underline-offset: var(--spacing-05);
         }
     
-        @media screen and (min-width: 850px) {
+        @media (min-width: 850px) {
             padding: var(--spacing-0) var(--spacing-0) var(--spacing-8) var(--spacing-0);
             text-align: start;
         }
@@ -329,7 +326,7 @@ nav {
             color: var(--colors-white);
         }
     
-        @media screen and (min-width: 850px) {
+        @media (min-width: 850px) {
             position: inherit;
             translate: 0 0;
             margin-bottom: var(--spacing-8);
@@ -344,7 +341,7 @@ nav {
     position: relative;
     z-index: 2;
 
-    @media screen and (min-width: 850px) {
+    @media (min-width: 850px) {
         margin-top: 0; 
     }
 
@@ -359,40 +356,37 @@ nav {
             width: 60vw;
             height: 90%;
         
-            @media screen and (min-width: 600px) {
+            @media (min-width: 600px) {
                 max-width: 466.398px;
             }
         }
     
-        --animation-xs: bannermove 19s linear infinite;
-        --animation-s: bannermove 23s linear infinite;
-        --animation-m: bannermove 28s linear infinite;
-        --animation-l: bannermove 35s linear infinite;
-        --animation-xl: bannermove 42s linear infinite;
+        --animation-duration: 19s; 
     
-        animation: var(--animation-xs);
+        animation: bannermove var(--animation-duration) linear infinite;
+        animation-duration: var(--animation-duration);
 
         &:hover {
             animation-play-state: paused;
         }
     
-        @media screen and (min-width: 580px) {
-            animation: var(--animation-s);
+        @media (min-width: 580px) {
+        --animation-duration: 23s; 
         }
     
-        @media screen and (min-width: 900px) {
-            animation: var(--animation-m);
+        @media (min-width: 900px) {
+        --animation-duration: 28s; 
         }
     
-        @media screen and (min-width: 1400px) {
-            animation: var(--animation-l);
+        @media (min-width: 1400px) {
+        --animation-duration: 35s; 
         }
     
-        @media screen and (min-width: 1600px) {
-            animation: var(--animation-xl);
+        @media (min-width: 1600px) {
+        --animation-duration: 42s; 
         }
     
-        @media screen and (prefers-reduced-motion) {
+        @media (prefers-reduced-motion) {
             animation-play-state: paused;
         }
         
@@ -407,7 +401,7 @@ nav {
                 display: none;
             }
     
-            @media screen and (min-width: 1100px) {
+            @media (min-width: 1100px) {
                 flex-direction: row;
                 flex-wrap: wrap;
             }
@@ -422,7 +416,7 @@ nav {
     left: 50%;
     translate: -50% 0;
 
-    @media screen and (min-width: 1100px) {
+    @media (min-width: 1100px) {
         width: 1100px;
         padding: var(--spacing-0) var(--spacing-4);
     }
@@ -445,7 +439,7 @@ nav {
                 animation: toTheRight .2s ease-in, .2s toTheBottomSmall .2s ease-in;
                 animation-fill-mode: forwards;
             
-                @media screen and (min-width: 425px) {
+                @media (min-width: 425px) {
                     animation: toTheRight .2s ease-in, .2s toTheBottom .2s ease-in;
                     animation-fill-mode: forwards;
             
@@ -460,7 +454,7 @@ nav {
                 height: 265px;
                 width: 100%;
             
-                @media screen and (min-width: 425px) {
+                @media (min-width: 425px) {
                     height: 117.5px;
                     width: 100%;
                     animation: toTheTop .2s ease-in, .4s toTheLeft .2s ease-in;
@@ -468,7 +462,7 @@ nav {
                 }
             }
         
-            @media screen and (min-width: 425px) {
+            @media (min-width: 425px) {
                 width: 0%;
                 height: 48px;
             }
@@ -528,7 +522,7 @@ nav {
             translate: 0 -85%;
             opacity: 0;
         
-            @media screen and (min-width: 425px) {
+            @media (min-width: 425px) {
                 position: absolute;
                 width: 100%;
                 z-index: 1;
@@ -540,7 +534,7 @@ nav {
                 animation: .4s dropItemsColumn .2s cubic-bezier(.12,.13,.81,1.49), .2s appear .2s;
                 animation-fill-mode: forwards;
             
-                @media screen and (min-width: 425px) {
+                @media (min-width: 425px) {
                     animation: .4s dropItems .2s cubic-bezier(.12,.13,.81,1.49), .2s appear .2s;
                     animation-fill-mode: forwards;
                 }
@@ -550,7 +544,7 @@ nav {
                 animation: disappear .2s, liftItemsColumn .2s cubic-bezier(.12,.13,.81,1.49);
                 animation-fill-mode: forwards;
             
-                @media screen and (min-width: 425px) {
+                @media (min-width: 425px) {
                     animation: disappear .2s, liftItems .2s cubic-bezier(.12,.13,.81,1.49);
                     animation-fill-mode: forwards;
                 }
@@ -568,7 +562,7 @@ nav {
                 position: relative;
                 z-index: 2;
             
-                @media screen and (min-width: 425px) {
+                @media (min-width: 425px) {
                     flex-direction: row; 
                     justify-content: center;
                 }
@@ -646,7 +640,7 @@ nav {
         
             .vacancy-content-a {
                 .vacancy-content-text {
-                    @media screen and (min-width: 1000px) {
+                    @media (min-width: 1000px) {
                         display: flex; 
                         flex-direction: row;
                         align-items: center;
@@ -658,7 +652,7 @@ nav {
                     }
                 }
                 
-                @media screen and (min-width: 450px) {
+                @media (min-width: 450px) {
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
@@ -669,7 +663,7 @@ nav {
             .vacancy-employee {
                 display: none; 
             
-                @media screen and (min-width: 450px) {
+                @media (min-width: 450px) {
                     display: inline;
                     width: 84.5px;
                     height: 84.5px;
@@ -681,34 +675,12 @@ nav {
     }
 
     >img {
-        position: absolute;
-        z-index: -1;
-        opacity: .5;
         width: 800px;
-
-        @media screen and (min-width: 680px) {
-            right: -80%;
-        }
-    
-        @media screen and (min-width: 800px) {
-            right: -70%;
-        }
-    
-        @media screen and (min-width: 920px) {
-            right: -60%;
-        }
-    
-        @media screen and (min-width: 1040px) {
-            right: -50%;
-        }
-    
-        @media screen and (min-width: 1440px) {
-            right: -60%;
-        }
-    
-        @media screen and (min-width: 1660px) {
-            right: -70%;
-        }
+        opacity: .5;
+        position: absolute;
+        left: 50%;
+        translate: -15% 0;
+        z-index: -1;
     }
     
     .large-bg-ink-vacancies1 {
@@ -724,30 +696,8 @@ nav {
     .large-bg-ink-vacancies2 {
         rotate: 220deg;
         top: 30%;
-
-        @media screen and (min-width: 680px) {
-            left: -80%;
-        }
-    
-        @media screen and (min-width: 800px) {
-            left: -70%;
-        }
-    
-        @media screen and (min-width: 920px) {
-            left: -60%;
-        }
-    
-        @media screen and (min-width: 1040px) {
-            left: -50%;
-        }
-    
-        @media screen and (min-width: 1440px) {
-            left: -60%;
-        }
-    
-        @media screen and (min-width: 1660px) {
-            left: -70%;
-        }
+        left: 0;
+        translate: -50% 0;
     }
 }
 
@@ -797,7 +747,7 @@ nav {
     position: relative;
     z-index: 2;
 
-    @media screen and (min-width: 1100px) {
+    @media (min-width: 1100px) {
         display: flex; 
         justify-content: center;
     }
@@ -822,7 +772,7 @@ nav {
                 border-radius: var(--border-sm) var(--border-sm) var(--border-sm) var(--border-0);
             }
 
-            @media screen and (min-width: 500px) {
+            @media (min-width: 500px) {
                 display: grid; 
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -863,7 +813,7 @@ nav {
             }
         }
 
-        @media screen and (min-width: 1100px) {
+        @media (min-width: 1100px) {
             width: 1100px;
         }
     }
@@ -898,7 +848,7 @@ footer {
             align-items: center;
         }
     
-        @media screen and (min-width: 340px) {
+        @media (min-width: 340px) {
             flex-direction: row;
         }
     }
