@@ -1,22 +1,3 @@
-:focus {
-    outline-color: var(--colors-black);
-}
-
-.skip-link {
-    position: absolute;
-    top: 5rem;
-    left: -1000px;
-    z-index: 99;
-    /* Flex parent */
-    display: flex; 
-    align-items: center;
-
-    &:focus {
-        top: 5rem;
-        left: 2rem;
-    }
-}
-
 header {
     position: relative;
 
