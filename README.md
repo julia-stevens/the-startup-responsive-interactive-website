@@ -17,7 +17,7 @@ De instructies voor deze opdracht staan in: [INSTRUCTIONS.md](https://github.com
 * De media queries staan onderaan in de styling van de betreffende selector. In dit [voorbeeld](https://github.com/julia-stevens/the-startup-responsive-interactive-website/blob/ae04b5e13ff5ced125c26bf9f8b5cd8961363782/styles/style.css#L21-L41) staat de media query dus onderaan de algemene styling van de `nav`, daarna volgen de genesten selectoren. 
 
 ### Naamgeving
-* Kebab-casing in HTML en CSS, zie [voorbeeld](https://github.com/julia-stevens/the-startup-responsive-interactive-website/blob/main/styles/stylesheet.css)
+* Kebab-casing in HTML en CSS, zie [voorbeeld](https://github.com/julia-stevens/the-startup-responsive-interactive-website/blob/9a30182f18ccecb6b1a8aa75443a3f05bc151d6d/styles/stylesheet.css#L61-L64)
 * Naamgeving classes beschrijven (informatie) inhoud van betreffende sectie, zie [voorbeeld](https://github.com/julia-stevens/the-startup-responsive-interactive-website/blob/f82baa1e0b1a3a04611fd139ed3aee0423a79acf/index.html#L128). De class heet hier 'vacancy' en beschrijft hiermee de inhoud van deze sectie, namelijk een vacature
 * Naamgeving custom properties overgenomen vanuit [styleguide Drukwerkdeal](https://styleguide.printdeal.cloud/packages/ui-library/6.7.2/?path=/docs/fundamentals-colors--docs), zie [stylesheet](https://github.com/julia-stevens/the-startup-responsive-interactive-website/blob/f82baa1e0b1a3a04611fd139ed3aee0423a79acf/styles/stylesheet.css#L35-L58)
 * CamelCase in JS, zie [voorbeeld](https://github.com/julia-stevens/the-startup-responsive-interactive-website/blob/f82baa1e0b1a3a04611fd139ed3aee0423a79acf/scripts/script.js#L1-L12)
