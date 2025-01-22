@@ -91,7 +91,7 @@ In de animatie van deze interactie, komen _timing_ en _staging_ van de Disney an
 Deze interactie is getest met verschillende gebruikers. Aan de hand van de bevindingen blijkt het eenvoudig om de filter-knop te vinden en te gebruiken. Ook de `sticky` positie is prettig, zodat je als gebruiker het filter kan aanpassen, ook wanneer je door de lijst aan het scrollen bent. Op basis van de tests heb ik ook een aantal aanpassingen gemaakt, namelijk een duidelijkere hover-state over het geactiveerde filter (zie video). 
 
 ## Kenmerken 
-### HTML
+### [HTML](https://github.com/julia-stevens/the-startup-responsive-interactive-website/blob/main/index.html)
 De pagina is bestaat uit o.a. een `header`, `nav` en verschillende `section`s, zoals voor de vacatures, het inschrijf formulier en de quote. De vacatures zijn op zichzelf ook een `section` met daarin een `article`. 
 
 ```html
@@ -113,7 +113,7 @@ De pagina is bestaat uit o.a. een `header`, `nav` en verschillende `section`s, z
 </section>
 ```
 
-### CSS
+### [CSS](https://github.com/julia-stevens/the-startup-responsive-interactive-website/tree/main/styles)
 Ik heb gewerkt met 2 stylesheets. Eén met daarin custom properties en classes met daarin de huisstijl van Drukwerkdeal. En de ander bevat alle styling en layout voor de pagina. 
 
 Aan de hand van verschillende classes en keyframes is bijvoorbeeld de filter animatie gebouwd. Zie bijvoorbeeld hoe de achtergrond van het filter-menu. Deze class (`openMenu`) wordt in JavaScript getoggled door een klik op de knop. 
@@ -140,7 +140,7 @@ Aan de hand van verschillende classes en keyframes is bijvoorbeeld de filter ani
 }
 ```
 
-### JavaScript
+### [JavaScript](https://github.com/julia-stevens/the-startup-responsive-interactive-website/blob/main/scripts/script.js)
 In JS worden o.a. de verschillende classes met de keyframes voor de filter animatie getoggled met door een klik-event. 
 
 De functie `filterBackgroundAnimation` wordt aangeroepen bij een klik op de filter-knop. In deze functie wordt gecheckt of het element met de achtergrond al de class `openMenu` bevat, zo ja: dan wordt de class voor de sluit animatie toegevoegd (en `openMenu` verwijderd). Zo nee: dan wordt de class `openMenu` toegevoegd en de class `closeMenu` verwijderd. 
