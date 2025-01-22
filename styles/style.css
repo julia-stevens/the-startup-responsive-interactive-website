@@ -423,9 +423,7 @@ nav {
                 @media (min-width: 425px) {
                     animation: toTheRight .2s ease-in, .2s toTheBottom .2s ease-in;
                     animation-fill-mode: forwards;
-            
-                max-width: 1068px;
-            
+                    max-width: 1068px;
                 }
             }
             
