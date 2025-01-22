@@ -17,7 +17,6 @@ navMenuButton.addEventListener("click", toggleNavMenu);
 // filter menu
 filterButton.addEventListener("click", filterAnimationToggle);
 
-
 // nav menu
 function toggleNavMenu() {
     navMenuButton.classList.toggle("openMenu");
