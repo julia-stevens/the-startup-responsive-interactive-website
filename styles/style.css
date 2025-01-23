@@ -4,7 +4,7 @@ header {
     .side-figure-header {
         display: none; 
     
-        @media (min-width: 900px) {
+        @media (min-width: 900px) { /* vanaf 900px display block en positioning */
             display: block;
             position: absolute;
             width: 300px;
@@ -29,7 +29,7 @@ nav {
     flex-direction: column;
     align-items: center;
 
-    @media (min-width: 456px) {
+    @media (min-width: 456px) { /* vanaf 456px horizontaal uitlijnen */
         flex-direction: row;
         justify-content: space-between;
     }
@@ -90,12 +90,12 @@ nav {
                 font-size: var(--body-text-sm);
             }
             
-            &.openMenu::after {
+            &.openMenu::after { /* bij class .openMenu voeg ::after toe met 'Sluit menu' */
                 content: "Sluit menu";
  
             }
             
-            img.openMenu {
+            img.openMenu { /* bij class .openMenu bij de afbeelding, verander content en verander width */
                 content: url("../assests/cross.svg");
                 width: 25px;
             }
@@ -126,7 +126,7 @@ nav {
         transition: .3s ease-in;
         visibility: hidden;
 
-        li::before {
+        li::before { /* voeg afbeelding toe aan list items */
             content: "";
             background-image: url("../assests/arrow-side.svg");
             background-repeat: no-repeat;
@@ -134,7 +134,7 @@ nav {
             padding-right: var(--spacing-6);
         }
 
-        &.openMenu {
+        &.openMenu { /* en bij .openMenu, maak de items zichtbaar en verander positie naar 0%(x) 0%(y) */
             visibility: visible;
             translate: 0% 0%;
         
@@ -191,7 +191,7 @@ nav {
 
     .overlay-gradient {
         position: absolute;
-        background-image: 
+        background-image: /* gradient achtergrond header afbeelding */
             linear-gradient(
             0deg,
             hsl(22deg 80% 54%) 0%,
@@ -214,7 +214,7 @@ nav {
 
     .heading-slider {
         padding: var(--spacing-4) var(--spacing-2);
-        width: calc(((var(--spacing-2) * 2) + 171.844px) * 4);
+        width: calc(((var(--spacing-2) * 2) + 171.844px) * 4); /* breedte van de lijst van één keer alle kernwaarde, wordt vermenigvuldigd met 4, omdat er 4 kopiën zijn (om de hele breedte van het scherm in te nemen) */
         /* Flex parent */
         display: flex; 
         gap: var(--spacing-6);
@@ -255,7 +255,7 @@ nav {
             animation-play-state: paused;
         }
     
-        @media (prefers-reduced-motion) {
+        @media (prefers-reduced-motion) { /* bij instelling om bewegingen te minimaliseren */
             width: 100vw;
             overflow-x: auto;
         }
@@ -371,8 +371,8 @@ nav {
             animation-play-state: paused;
         }
         
-        @media (prefers-reduced-motion) {
-            display: flex;
+        @media (prefers-reduced-motion) { /* bij instelling om bewegingen te minimaliseren, display flex de afbeeldingen onder elkaar (column) */
+            display: flex; 
             flex-direction: column;
             align-items: center;
     
@@ -382,7 +382,7 @@ nav {
                 display: none;
             }
     
-            @media (min-width: 900px) {
+            @media (min-width: 900px) { /* vanaf 900px display de afbeeldingen naast elkaar, en wrap zodat deze automatisch op een volgende 'regel' komen te staan*/
                 flex-direction: row;
                 flex-wrap: wrap;
             }
@@ -416,24 +416,24 @@ nav {
             height: 48px;
             max-width: 1068px;
 
-            &.openMenu {
+            &.openMenu { /* bij .openMenu class, activeer toTheRight animatie, na .2s activeer toTheBottomSmall animatie*/
                 animation: toTheRight .2s ease-in, .2s toTheBottomSmall .2s ease-in;
                 animation-fill-mode: forwards;
             
-                @media (min-width: 425px) {
+                @media (min-width: 425px) { /* vanaf 425px, activeer toTheBottom animatie (ipv toTheBottomSmall) */
                     animation: toTheRight .2s ease-in, .2s toTheBottom .2s ease-in;
                     animation-fill-mode: forwards;
                     max-width: 1068px;
                 }
             }
             
-            &.closeMenu {
+            &.closeMenu { /* bij .closeMenu class, activieer toTheTopSmall animatie, na .4s activeer toTheLeft animatie */
                 animation: toTheTopSmall .2s ease-in, .4s toTheLeft .2s ease-in;
                 animation-fill-mode: forwards;
                 height: 265px;
                 width: 100%;
             
-                @media (min-width: 425px) {
+                @media (min-width: 425px) { /* vanaf 425px, activeer toTheTop (ipv toTheTopSmall) */
                     height: 117.5px;
                     width: 100%;
                     animation: toTheTop .2s ease-in, .4s toTheLeft .2s ease-in;
@@ -465,11 +465,11 @@ nav {
                 max-width: 900px;
             }
         
-            button.openMenu {
+            button.openMenu { /* wanneer .openManu class wordt toegevoegd, activeer changeButtonWidth animatie */
                 animation: changeButtonWidth .2s ease-in;
                 animation-fill-mode: forwards;
     
-                img.openMenu {
+                img.openMenu { /* bij .openMenu class wordt de content van de afbeelding veranderd */
                     animation: .6s changeIcon .1s ease-in; 
                     animation-fill-mode: forwards;
                 }
@@ -509,21 +509,21 @@ nav {
                 opacity: 0;
             }
         
-            &.openMenu {
+            &.openMenu { /* bij .openMenu wordt de dropItemsColumn na .4s geactiveerd, en daarna de appear animatie (na .2s) */
                 animation: .4s dropItemsColumn .2s cubic-bezier(.12,.13,.81,1.49), .2s appear .2s;
                 animation-fill-mode: forwards;
             
-                @media (min-width: 425px) {
+                @media (min-width: 425px) { /* bij een grotere scherm breedte wordt de dropItems animatie geactiveerd */
                     animation: .4s dropItems .2s cubic-bezier(.12,.13,.81,1.49), .2s appear .2s;
                     animation-fill-mode: forwards;
                 }
             }
             
-            &.closeMenu {
+            &.closeMenu { /* bij .closeMenu wordt eerste de disappear geactiveerd, en daarna de liftItemsColumn aniamtie */
                 animation: disappear .2s, liftItemsColumn .2s cubic-bezier(.12,.13,.81,1.49);
                 animation-fill-mode: forwards;
             
-                @media (min-width: 425px) {
+                @media (min-width: 425px) { /* bij een groter scherm, wordt de liftItems animatie getriggered (ipv liftItemsColumn) */
                     animation: disappear .2s, liftItems .2s cubic-bezier(.12,.13,.81,1.49);
                     animation-fill-mode: forwards;
                 }
@@ -558,13 +558,13 @@ nav {
                         padding: var(--spacing-2) var(--spacing-4);
                     }
         
-                    input:checked + label {
+                    input:checked + label { /* bij geselecteerde input (checked) en label, verander (o.a.) achtergrond kleur en tekst kleur */
                         background-color: var(--colors-primary-600);
                         color: var(--colors-white);
                         border: none;
                         transition: .2s ease-in;
                     
-                        &:hover {
+                        &:hover { /* wanneer input gechecked is en input en label worden gehovered, verander de tekst kleur  */
                             color: var(--colors-black);
                         }
                     }
@@ -706,12 +706,12 @@ nav {
         }
         
         strong {
-            display: block;
+            display: block; /* block element van <strong>, zodat deze op de volgende regel komt te staan (flow layout) */
             font-family: var(--font-family-semibold);
         }
     }
     
-    p::before {
+    p::before { /* voeg afbeelding van quotes toe voor de tekst in de quote section */
         content: "";
         background-image: url("../assests/quotemarks.png");
         background-repeat: no-repeat;
@@ -751,7 +751,7 @@ nav {
                 border-radius: var(--border-sm) var(--border-sm) var(--border-sm) var(--border-0);
             }
 
-            @media (min-width: 500px) {
+            @media (min-width: 500px) { /* vanaf 500px een grid layout voor de inputs en textarea van signup section */
                 display: grid; 
                 grid-template-columns: 1fr 1fr;
 
@@ -979,7 +979,7 @@ footer {
     0% {
 
     }
-    100% {
+    100% { /* bij 100% verander de content in een andere afbeelding en pas width aan */
         content: url("../assests/cross-white.svg");
         width: 30px;
     }

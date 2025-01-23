@@ -178,12 +178,12 @@ p {
     outline-color: var(--colors-primary-500);
 }
 
-.text-input:user-invalid {
+.text-input:user-invalid { /* bij foutieve input van gebruiker */
     background-color: var(--colors-error-100);
     border-color: var(--colors-error-600);
 }
 
-.text-input:user-valid {
+.text-input:user-valid { /* bij juiste input van gebruiker */
     background-color: var(--colors-success-100);
     border-color: var(--colors-success-500);
 }
@@ -229,11 +229,11 @@ p {
     border-color: var(--colors-primary-600);
 }
 
-:focus {
+:focus { /* wanneer er op een element gefocust wordt, voeg outline toe */
     outline-color: var(--colors-black);
 }
 
-.skip-link {
+.skip-link { /* verplaats skip link uit de viewport, naar links */
     position: absolute;
     top: 5rem;
     left: -1000px;
@@ -242,7 +242,7 @@ p {
     display: flex; 
     align-items: center;
 
-    &:focus {
+    &:focus { /* wanneer de skip link focus krijgt (altijd eerste tab door gebruiker) verander de positioning (binnen de viewport) */
         top: 5rem;
         left: 2rem;
     }
