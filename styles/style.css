@@ -39,6 +39,7 @@ nav {
     }
 
     .nav-links {
+       
         /* Flex parent */
         display: flex; 
         flex-direction: column;
@@ -48,7 +49,6 @@ nav {
 
         @media (min-width: 300px) {
             flex-direction: row;
-            align-items: center;
         }
 
         a {
@@ -214,7 +214,7 @@ nav {
 
     .heading-slider {
         padding: var(--spacing-4) var(--spacing-2);
-        width: calc(((var(--spacing-2) * 2) + 171.844px) * 4); /* breedte van de lijst van één keer alle kernwaarde, wordt vermenigvuldigd met 4, omdat er 4 kopiën zijn (om de hele breedte van het scherm in te nemen) */
+        width: calc(((var(--spacing-2) * 2) + 171.844px) * 3); /* breedte van de lijst van één keer alle kernwaarde, wordt vermenigvuldigd met 3, omdat er 3 kopiën zijn (om de hele breedte van het scherm in te nemen) */
         /* Flex parent */
         display: flex; 
         gap: var(--spacing-6);
